@@ -9,16 +9,6 @@ export POSTGRES_CMD="su -u postgres $SHIPPABLE_POSTGRES_BINARY \
 	-c config_file=/etc/postgresql/$PG_MAJOR/main/postgresql.conf"
 export LOGFILE=/var/log/postgresql/pg.log
 
-# import ubuntu image
-# install postgres 9.5 from repo
-# create directory and config files
-# set entrypoint script. DO NOT change the interface so that same docker run command works
-#		- check if db present or not
-#		- create db if not use pg_ctl
-#		- check if user prsent or not
-#		- create user if not, use pg_ctl
-#		- create mounts if not exists
-#   - throw error if no config file
 _print_runtime() {
 	echo "PG runtime envs"
 	echo "PG_MAJOR: $PG_MAJOR"
